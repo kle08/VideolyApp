@@ -90,7 +90,7 @@ export default class Movies extends Component {
             onDelete={this.handleDelete}
             onLike={this.handleLike}
             onSort={this.handleSort}
-            sortColumn={sortColumn}
+            sortColumn={this.sortColumn}
           />
           <Pagination
             itemsCount={filtered.length}
