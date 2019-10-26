@@ -13,11 +13,12 @@ class LoginForm extends Form {
       .required()
       .label('Username'),
     password: Joi.string()
-      .isRequired()
+      .required()
       .label('Password')
   };
 
   doSubmit = () => {
+    // used for connecting database
     console.log('Submitted');
   };
 
