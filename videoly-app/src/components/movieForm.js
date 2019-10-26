@@ -68,15 +68,15 @@ class MovieForm extends Form {
       dailyRentalRate: movie.dailyRentalRate
     };
   }
-  dosubmit = () => {
-    saveMovie(this.state.data);
+  dosubmit = async () => {
+    await saveMovie(this.state.data);
     this.props.history.push('/movies');
   };
   render() {
     return (
       <div>
         <h1>Movie Form</h1>
-        <form onSubmit={this.handleSubmit}>
+        <form onSubmit={this.dosubmit}>
           {this.renderInput('title', 'Title')}
           {this.renderSelect('genreId', 'Genre', this.state.genres)}
           {this.renderInput('numberInStock', 'Number in Stock', 'number')}
