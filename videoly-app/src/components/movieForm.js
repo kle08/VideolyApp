@@ -71,6 +71,8 @@ class MovieForm extends Form {
   dosubmit = async () => {
     await saveMovie(this.state.data);
     this.props.history.push('/movies');
+    // const { state } = this.props.location;
+    window.location = '/';
   };
   render() {
     return (

@@ -10,6 +10,7 @@ import { Link } from 'react-router-dom';
 import SearchBox from './searchBox';
 import { toast } from 'react-toastify';
 
+
 export default class Movies extends Component {
   constructor() {
     super();
@@ -98,6 +99,7 @@ export default class Movies extends Component {
   render() {
     const { length: count } = this.state.movies;
     const { sortColumn, pageSize, currentPage } = this.state;
+    const { user } = this.props;
 
     if (count === 0) return <p>There are no more movies in the data </p>;
 
@@ -113,13 +115,15 @@ export default class Movies extends Component {
           />
         </div>
         <div className='col'>
-          <Link
-            to='/movies/new'
-            className='btn btn-primary'
-            style={{ marginBotton: 20 }}
-          >
-            New Movie
+          {user && (
+            <Link
+              to='/movies/new'
+              className='btn btn-primary'
+              style={{ marginBotton: 20 }}
+            >
+              New Movie
           </Link>
+          )}
           <p>Showing {totalCount} movies in the database.</p>
           <SearchBox
             value={this.state.searchQuery}
