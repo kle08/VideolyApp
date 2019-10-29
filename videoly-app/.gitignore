@@ -18,8 +18,6 @@ yarn-error.log*
 
 App.test.js
 
-package-lock.json
-package.json
 
 fakeGenreService.js
 fakeMovieService.js
