@@ -34,7 +34,6 @@ class LoginForm extends Form {
         this.setState({ errors })
       }
     }
-    console.log('Submitted');
   };
 
   render() {

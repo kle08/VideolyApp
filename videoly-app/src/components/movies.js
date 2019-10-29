@@ -61,7 +61,6 @@ export default class Movies extends Component {
   }
 
   handleGenreSelect = genre => {
-    console.log(genre);
     this.setState({ selectedGenre: genre, searchQuery: '', currentPage: 1 });
   };
 
@@ -85,7 +84,6 @@ export default class Movies extends Component {
   }
 
   handleLike = movie => {
-    console.log('liked clicked', movie);
     const movies = [...this.state.movies];
     const index = movies.indexOf(movie);
     movies[index] = { ...movies[index] };
@@ -100,7 +98,6 @@ export default class Movies extends Component {
     // const { length: count } = this.state.movies;
     const { sortColumn, pageSize, currentPage } = this.state;
     const { user } = this.props;
-
 
     const { totalCount, data: movies } = this.getPagedData();
 
