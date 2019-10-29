@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import Table from './table';
 import Liked from './Like';
 import { Link } from 'react-router-dom';
-import auth from '../services/authService';
+
 
 class MoviesTable extends Component {
   columns = [
